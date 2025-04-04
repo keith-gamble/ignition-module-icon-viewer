@@ -4,11 +4,8 @@ This is a simple Java application that allows you to view all available Vector I
 
 ## How It Works
 
-This application uses Java reflection to access and run the `main` method of the `VectorIcons` class from the Ignition client API. The `VectorIcons` class has a built-in dialog viewer that displays all available icons.
-
 The key components:
-1. A simple Java class that uses reflection to find and run the VectorIcons.main() method
-2. Dependencies on the Ignition SDK libraries (specifically client-api and ignition-common)
+1. Dependencies on the Ignition SDK libraries (specifically client-api and ignition-common)
 
 ## Setup Instructions
 
@@ -21,22 +18,9 @@ The key components:
    ./gradlew run
    ```
 
-### Option 2: Manual Setup
-
-1. Create a directory for the project
-2. Download the required JAR files:
-   - ignition-common-8.1.24.jar
-   - client-api-8.1.24.jar
-3. Place them in a `lib` folder
-4. Compile and run the IconViewer class with these JARs in the classpath
-
-## Why Reflection?
-
-We use reflection because:
-1. The `VectorIcons` class is part of a larger framework
-2. This approach avoids creating a direct dependency on internal implementation details
-3. We can access the built-in viewer functionality without needing to reimplement it
-
 ## Expected Output
 
-When run successfully, a dialog window will open showing all available Vector Icons in the Ignition framework, allowing you to browse and select icons for your application.
+When run successfully, a dialog window will open showing all available Vector Icons in the Ignition framework, allowing
+you to browse and select icons for your application.
+Double click any icon to have the name of that icon copied to your clipboard, suitable for use in code via
+`VectorIcons.get(name)`.
